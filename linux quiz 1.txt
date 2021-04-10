@@ -1,0 +1,76 @@
+1.Typing "pwd" causes what to happen? 
+  prints the current working directory
+
+2.Typing "cd" causes what to happen? 
+  goes back to home directory or does nothing when already in home dir.
+
+3.The "cd" command (then hit return) followed by the "pwd" command does what? 
+  goes back to home directory and prints the current working directory.
+
+4.Typing "cd" (then hit return) followed by "cd .." causes what to happen? 
+  goes back to home directory and cd.. the parent directory
+
+5.The commands "cd" followed by "mkdir stuff" are run, what happens? 
+  goes back to home directory and creates a file named "stuff" in that directory if stuff does not exist, else error/warning.
+ 
+6.The commands "cd" followed by "mkdir ../stuff" are run, what happens? Why?
+  cd goes back to home directory, ..stuff creates the file "stuff" one directory previous also known as the parent directory.
+  in any normal multi-user file system, one cannot make a directory as they have no write permission.
+
+7.I am in my home directory and I type: cd bin - What directory am I in now? 
+  bin(binary) directory, i am in my home(dir) bin.
+
+8.I am in my home directory and I type: cd /bin - What directory am I in now? 
+  directory called bin, which I don't own. It has lots of OS programs - it is an OS directory. 
+
+9.I am in my home directory and I type: cd ../bin - What happens? Why? 
+  No such file directory, because its trying to reach the parent directory to find.
+
+10.Typing "cd /" causes what to happen? 
+   brings you to the root directory
+
+11.Typing "cd /" followed by "cd .." causes what to happen? 
+   brings you to the root directory and then its parent directory. (Maybe) It should give an error as there is no parent of root dir.
+
+12.The commands "cd /" followed by "mkdir stuff" are run, what happens?
+ brings you to the root directory and you need permission to write in the root directory.
+ 
+ Typing "cd \" causes what to happen?
+ you probably made a typo error, thinking it was windows. cd \ continues command on a newline. 
+
+ What is the directory /bin for? 
+ OS programs - you can type names
+
+ How do you list the files in /bin? 
+ ls /bin
+
+ EXTRA QUESTION (only for experienced Linux people): Write a one-line command line to count the number of files in /bin 
+ ls /bin | wc -l (Can pipe through to word count program)
+
+ The command ls -l does what? 
+ list all files in current directory 
+
+ The command ls -a does what? 
+ lists all hidden files in currect directory under single column
+
+ The command ls -al does what? 
+ 
+
+ The command ls -R does what? 
+ lists all files including hidden in currect directory
+
+ On Windows command line, by typing in cd \ what happens? 
+ brings you to root directory
+
+ On Windows command line, by typing in cd / what happens? 
+ it gives an error that the command does not exist for Windows.
+
+ On Windows, C:\ is the equivalent of what on UNIX/Linux? 
+ /
+
+ On Windows, C:\Users\me is the equivalent of what on UNIX/Linux? 
+ home dir
+
+ On Windows, C:\Windows\System32 is the equivalent of what on UNIX/Linux? 
+ /bin
+

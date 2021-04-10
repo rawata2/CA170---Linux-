@@ -1,0 +1,49 @@
+ What is the environment variable $PATH? 
+ The PATH variable is an environment variable that contains an ordered list of paths that Unix will search for executables when running a command
+
+ Show me the value of $PATH 
+ echo $PATH | tr ':' '\n'
+ /usr/local/nbin:/usr/bin:/bin:usr/local/games:/users/ca1/"user"
+
+ Find what directory "ls" is in.
+ by typing which ls it gives /bin/lis therefore it's in the root dir of bin.
+
+ Show the file size of the "ls" program. 
+ 138kb
+
+ Two programs, in different directories, have the same name. One is a system program. The other is a script that you wrote. What happens when you type that name? 
+ cd bin, nano ls, chmod +x ls. Whatever is first in the PATH runs first.
+
+ In the previous, if you find the system program is running when you type that name, how can you make sure that your program runs instead? 
+ change the PATH - put your dir first
+
+
+ EXTRA QUESTION (only for experienced Linux people): Get the value of $PATH and translate all the ":" characters to newline characters. 
+ Directories seperated by colons
+
+ Issuing the command gedit will do what?
+ lauches the text editor in gui and command line waits for you to finish.
+
+ What is the effect of the following Linux command? ls -al > myfile 
+ It does a long listing all files including hidden ones, and sends that output called "my file" in silence. If "my file" does not exist, it creates it in silence. if it doesn't, it overwrites it, in silence.
+
+ What will this do? cd ls -alR 
+ lists all files and directories including hidden, starting from Home dir.
+
+ What will this do? cd / ls -alR 
+ lists all files and directories including hidden, starting from root dir.
+
+
+ What will this do? cd / ls -al > outputfile.log 
+ "outfile" is made in the root dir which contains all root dir files
+
+ What will this do? cd / ls -al > $HOME/outputfile.log 
+ "outfile" is made in the root dir which contains all root dir files
+
+ Typing the command man man > man does what? 
+ man man prints the manual entry of all commands.
+ man man > man means get manual entry for man and dump into a file called man in the cd.
+ dangerous name as it's the same name as an OS program.
+ maybe now - or in future - this will be run by mistake when we type 'man'
+
+

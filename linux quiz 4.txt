@@ -1,0 +1,38 @@
+ First, there is the issue of the permissions for your home directory. If your home directory is blocked to your friend, then it doesn't matter what public_html permissions are, they can't see it. What chmod instruction do you need so your friend can access (but not do "ls" in) your home directory? 
+ chmod g-r+x $HOME chmod go-x $HOME
+
+ Next, what chmod instruction do you need so your friend can access (but not do "ls" in) your web directory? 
+ chmod g-r+x $HOME/public_html
+
+ Next, what chmod instruction do you need so your friend can "ls" in your web directory? Test that your friend can do an ls. 
+ chmod g+r $HOME/public_html
+ 
+ Test that your friend cannot do an ls. 
+ What command do you need to stop other people doing an "ls"? 
+ chmod g-r $HOME/public_html
+
+ Is my web site visible if I set the directory permissions as follows: chmod go-rwx public_html 
+ ls -ld pu* - not visible
+
+ Is my web site visible if I set the directory permissions as follows: chmod go-rx+w public_html 
+
+
+ Is my web site visible if I set the directory permissions as follows: chmod go-rw+x public_html 
+
+
+ Is my web site visible if I set the directory permissions as follows: chmod o-rw+x public_html 
+ ls -ld pu* - turns it backc on
+
+ Is my web page visible if I set the permission as follows: chmod -rwx file.html(index.html)
+ chmod -rwx index.html, ls -l index.html - webpage off
+ chmod +r ind*, ls -l index.html - webpage on
+
+ Is my web page visible if I set the permission as follows: chmod u+rwx file.html 
+ to look at url type student.computing.dcu.ie/~rawata2/index.html
+
+ Is my web page visible if I set the permission as follows: chmod +r file.html 
+
+
+ What is the minimal protection that your public_html directory needs? 
+
+

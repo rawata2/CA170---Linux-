@@ -1,0 +1,41 @@
+ Go into my Shakespeare directory. How many sub-directories does it have? How to get the machine to count things: Pipe the output to the "word count" program. 
+ cd /users/tutors/mhumr.../share/shakesphere find -type d | wc
+						43   387     2761 = 43
+
+ List all files called complete.html one level down from this directory. 
+ ls */complete.html
+
+ Find Act 3 of Macbeth. The size of this file is what? 
+ ls -l macbeth/act3*
+	33983(bytes)
+ 
+List all "Act 6" files in all plays. 
+ ls */act6* or find | grep act6
+
+ From your home directory, list all the "Act 6" files without changing directory. 
+ cd, find /users/tutors/mhumr.../share/shakesphere | grep -i act6 or
+ ls -l /users/tutors/mhumr.../share/shakesphere/*/act6*
+
+ In how many lines of the plays does the string "for Ireland" (exact case) appear? Count the number of lines it appears on in the files called complete.html. 
+ grep "for Ireland" */complete.html | wc
+        7     56        520 = 7
+
+ In how many different plays does the string "for Ireland" appear? Count the number of files it appears in in the files called complete.html. 
+ grep -l "for Ireland" */complete.html | wc
+        3      3        72  = 3
+
+ Show all lines in the complete.html files that contain "Scot" but not "Scots" or "Scotland" or "Scottish". 
+ grep -i (ignore cases) SCOT */complete.html so grep Scot */complete.html | grep -v Scots
+
+ How many times does the string "Scotland" appear in Act 3 of a Shakespeare play? Q. How would you find the answer to the previous using Google? 
+ grep Scotland */act3.html | grep --color= auto Scotland | wc
+
+ List all the web pages (HTML files). They are all one level down. 
+ ls */*.html
+
+ We have converted the DCU web server from http: to https: 
+ We need to fix old links. 
+ Search for the string "http://computing.dcu.ie" in all the web pages. 
+ Q. How would you find that string in all web pages using a Web browser? Or using a text editor? 
+ grep http://computing.dcu.ie */*.html
+
